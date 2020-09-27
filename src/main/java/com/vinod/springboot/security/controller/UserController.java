@@ -6,11 +6,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user")
 public class UserController {
 
-    @GetMapping
-    public String getUser() {
+    @GetMapping("/")
+    public String welcomePage() {
         return "Welcome User";
+    }
+
+    @GetMapping("/user")
+    public String getUserPage() {
+        return "User Page";
+    }
+
+    @GetMapping("/admin")
+    public String getAdminPage() {
+        return "Admin Page";
     }
 }
